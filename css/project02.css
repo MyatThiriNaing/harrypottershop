@@ -1,0 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
+
+/*For logo*/
+img.logo{
+	width: 200px;
+}
+
+/*for menu*/
+* {
+    margin: 0;
+    /*box-sizing: border-box;*/
+}
+html {
+    font-size: 16px;
+    font-family: Arial;
+}
+header {
+    /*border-bottom: 1px solid #eee;*/
+    height: 4rem;
+}
+.burger-wrapper {
+  cursor: pointer;
+}
+#menu{
+    background: rgba(0,0,0,0.7);
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    transition-timing-function: cubic-bezier(10,2,3,1);
+    transform: translateX(50rem);
+    top: 0;
+    z-index: 0;
+    transition: 0.5s;
+}
+#menuAvPaa {
+    display: none;
+}
+
+#menuAvPaa:checked ~ #menu {
+    transform: translateX(0rem);
+}
+
+#burger {
+    position: absolute;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#burger > div {
+    height: 2px;
+    background-color: white;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+#menuAvPaa:checked ~ #burger > div {
+  background-color: #fff;
+}
+
+#menuAvPaa:checked ~ #burger > div:nth-child(1) {
+    transform: translateY(15px) rotate(45deg);
+}
+#menuAvPaa:checked ~ #burger > div:nth-child(2) {
+    opacity: 0;
+}
+#menuAvPaa:checked ~ #burger > div:nth-child(3) {
+    transform: translateY(-15px) rotate(-45deg);
+}
+
+/*For menu hover*/
+ul li a.home:hover{
+	color: maroon;
+}
+
+ul li a.book:hover{
+	color: green;
+}
+
+ul li a.gift:hover{
+	color: yellow;
+}
+
+ul li a.contact:hover{
+	color: #05476e;
+}
+
+/*For menu active*/
+ul li a.home.active{
+	color: maroon;
+}
+
+ul li a.book.active{
+	color: green;
+}
+
+ul li a.gift.active{
+	color: yellow;
+}
+
+ul li a.contact.active{
+	color: #05476e;
+}
+
+/*For Index Page*/
+body{
+	padding: 0;
+	margin: 0;
+}
+.div1{
+	background: url('../image/bgimage01.jpg');
+	height: 720px;
+	color: white;
+	background-repeat: no-repeat;
+	background-size:cover ;
+
+
+	animation-name: slide;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.book .booklist img{
+	width: 250px;
+}
+
+@keyframes slide{
+	25%{
+		background: url('../image/image01.jpeg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	50%{
+		background: url('../image/bg1.jpeg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	75%{
+		background: url('../image/bg2.jpeg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	100%{
+		background: url('../image/bg3.jpeg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+/*nav ul{
+	display: flex;
+	justify-content: right;
+	align-items: right;
+}*/
+
+nav ul li{
+	list-style: none;
+	padding: 25px;
+	margin-top: 30px;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: white;
+	font-family: 'Public Sans', sans-serif;
+	font-size: 20px;
+}
+
+.div1 h1{
+	font-family: 'Staatliches', cursive;
+	text-align: center;
+	font-size: 49px;
+	margin-top: 40px;
+}
+
+.div1 span{
+	display: block;
+	font-family: 'Public Sans', sans-serif;
+	text-align: justify;
+	font-size: 27px;
+	width: 750px;
+	margin-left: 258px;
+	background: rgba(0,0,0,0.5)	;
+	line-height: 40px;
+	margin-top: 85px;
+	padding: 20px;
+	border-radius: 14px;
+}
+
+i.fas.fa-quote-left{
+    font-size: 40px;
+    background: rgba(0,0,0,0.7)	;
+
+}
+
+i.fas.fa-quote-right{
+	margin-left: 25px;
+    font-size: 40px;
+}
+
+/*For Home Page*/
+.divhome{
+	background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('../image/team1.jpeg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #FFDB00;
+}
+
+.div2 h1,.div3 h3,.footer h3{
+	font-family: 'Staatliches', cursive;
+	text-align: center;
+	font-size: 49px;
+}
+
+.div2 p,.div3 p,.footer p{
+	font-family: 'Public Sans', sans-serif;
+	text-align: justify;
+	font-size: 20px;
+	margin-left: 100px;
+	margin-right: 100px;
+	line-height: 30px;
+}
+
+.div3 button{
+	background: yellow;
+    color: maroon;
+    padding: 8px;
+    border-radius: 7px;
+    margin-left: 100px;
+    margin-top: 10px;
+    border: none;
+}
+
+.div3 button:hover{
+	background: maroon;
+	color: yellow;
+}
+
+.footer{
+	clear: both;
+}
+
+.ft-center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer-left{
+	width: 250px;
+	height: 125px;
+	background: rgba(0,0,0,0.5);
+	margin-right: 50px;
+	padding: 15px;
+	border-radius: 7px;
+
+}
+
+.footer-left input{
+	width: 170px;
+	padding: 7px;
+	border-radius: 7px;
+	margin-left: 30px;
+}
+
+.footer-left h4,.footer-right h4{
+	text-align: center;
+}
+
+.footer-left button{
+	padding: 5px;
+	margin-top: 7px;
+	border-radius: 7px;
+	margin-left: 144px;
+	border: none;
+}
+
+.footer-left .registerh{
+	background: yellow;
+	color:maroon;
+}
+
+.footer-left .registeri{
+	background: yellow;
+	color:maroon;
+}
+
+.footer .registerh:hover{
+	background: maroon;
+	color: yellow;
+}
+
+.footer .registerb{
+	background: silver;
+	color: green;
+}
+
+.footer .registerb:hover{
+	background: green;
+	color: silver;
+}
+
+.footer-item .registeri{
+	background: black;
+	color: yellow;
+}
+
+.footer-item .registeri:hover{
+	background: yellow;
+	color: black;
+}
+
+.footer-itemc .registerc{
+	background: #693402;
+	color: #05476e;
+}
+
+.footer-itemc .registerc:hover{
+	background: #05476e;
+	color: #693402;
+}
+
+.footer-right{
+	width: 250px;
+	height: 125px;
+	background: rgba(0,0,0,0.5);
+	margin-right: 50px;
+	padding: 15px;
+	border-radius: 7px;
+}
+
+.footer-right i{
+	font-size: 40px;
+}
+
+.footer-right .fa-facebook-square,.footer-right .fa-instagram-square{
+	margin-left: 87px;
+}
+
+.footer-right .fa-facebook-square,.footer-right .fa-twitter-square{
+	margin-top: 12px;
+}
+
+.footer p{
+	clear: both;
+}
+
+.footer h4{
+	font-size: 25px;
+}
+
+.footer center{
+	background: rgba(0,0,0,0.5);
+	padding: 20px;
+}
+
+.footer-item center{
+	background: rgba(0,0,0,0.5);
+	padding: 20px;
+}
+
+.footer-itemc center{
+	background: rgba(0,0,0,0.5);
+	padding: 20px; 
+}
+
+/*For Book Page*/
+.divbook{
+	background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('../image/team2.jpeg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: silver;
+}
+
+.book h1{
+	font-family: 'Staatliches', cursive;
+	text-align: center;
+	font-size: 49px;
+}
+
+.booklist .bookleft{
+	float: left;
+	width: 250px;
+	height: 300px;
+	margin-left: 100px;
+	margin-bottom: 20px;
+}
+
+.booklist .bookleft img{
+	width: 200px;
+}
+
+.booklist .bookright{
+	width: 800px;
+	height: 300px;
+	float: left;
+	margin-bottom: 20px;
+}
+
+.booklist .bookright p{
+	font-family: 'Public Sans', sans-serif;
+	text-align: justify;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.booklist .bookright a{
+	text-decoration: none;
+	background: silver;
+	color: green;
+	padding: 5px;
+	border-radius: 7px;
+}
+
+.btn{
+	margin-top: 20px;
+}
+
+.btn a:hover{
+	background: green;
+	color: silver;
+}
+
+/*For souvenirs*/
+.divitem{
+	background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('../image/team3.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: silver;
+}
+
+.divitem h1{
+	font-family: 'Staatliches', cursive;
+	text-align: center;
+	font-size: 49px;
+}
+
+.divitem p{
+	font-family: 'Public Sans', sans-serif;
+	text-align: justify;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+#item-p{
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+table img{
+	width: 350px;
+}
+
+table{
+	border: 2px solid silver;
+	margin-bottom: 40px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+table input{
+	width: 100px;	
+	height: 30px;
+}
+
+table button{
+	background: black;
+    color: yellow;
+    padding: 8px;
+    border-radius: 7px;
+    border: none;
+}
+
+table button:hover{
+	background: yellow;
+	color: black;
+}
+
+table label, table button{
+	font-size: 18px;
+}
+
+.footer-item h4.item-header{
+	color: yellow;
+	font-size: 25px;
+}
+
+.footer-item i{
+	color: yellow;
+}
+
+/*For contact us Page*/
+
+.divcontact{
+	background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('../image/team4.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #693402;
+}
+
+.divcontact h1{
+	font-family: 'Staatliches', cursive;
+	font-size: 49px;
+	margin-bottom: 30px;
+	padding: 15px;
+}
+
+.contact-detail{
+	font-family: font-family: 'Public Sans', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.5);
+	margin-left: 150px;
+	margin-right: 150px;
+	border-radius: 14px;
+	margin-bottom: 40px;
+}
+
+.contact-left{
+	width: 500px;
+	height: 500px;
+}
+
+.contact-right{
+	width: 350px;
+	height: 500px;
+}
+
+.contact-detail input,.contact-detail textarea{
+	width: 300px;
+	padding: 17px;
+	margin-bottom: 12px;
+	border-radius: 7px;
+	box-sizing: border-box;
+	border: none;
+	font-family: inherit;
+}
+
+.contact-detail button{
+	width: 100%;
+	display: block;
+	border-radius: 7px;
+}
+
+.contact-right span{
+	font-size: 20px;
+}
+
+.contact-right a{
+	text-decoration: none;
+	color: #693402;
+	line-height: 3;
+	font-size: 20px;
+}
+
+.contact-right i{
+	font-size: 20px;
+	margin-right: 7px;
+}
+
+.contact-detail input.submit:hover{
+	background: #05476e;
+	color: #693402;
+}
+
+.footer-itemc h4{
+	font-size: 25px;
+	color: #693402;
+}
+
